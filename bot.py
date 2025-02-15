@@ -1,4 +1,4 @@
-#Code by KA18 the @legend580 💛❤️
+#Coded by KA18 the @legend580 💛❤️
 
 import logging
 logging.basicConfig(level=logging.DEBUG,
@@ -24,7 +24,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 class Bot(Client):
     def __init__(self):
         super().__init__(
-            name="VS Bot",
+            name="JAY Bot",
             bot_token=Config.BOT_TOKEN,
             api_id=Config.API_ID,
             api_hash=Config.API_HASH,
@@ -37,8 +37,18 @@ class Bot(Client):
         await super().start()
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
-
-       
+        self.set_parse_mode(ParseMode.HTML)
+        self.LOGGER(__name__).info(f"""
+        
+           ░░░░░██╗░█████╗░██╗░░░██╗
+           ░░░░░██║██╔══██╗╚██╗░██╔╝
+           ░░░░░██║███████║░╚████╔╝░
+           ██╗░░██║██╔══██║░░╚██╔╝░░
+           ╚█████╔╝██║░░██║░░░██║░░░
+           ░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░
+           
+        BOT WORKING PROPERLY......!!""")
+      
         #web-response
         app = web.AppRunner(await web_server())
         await app.setup()
