@@ -11,6 +11,7 @@ class script(object):
     WAIT_MSG = """"<b>Processing ...</b>"""
 
     ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
+    
  ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/group_30_robot>Cᴏʟʟᴇɢᴇ Fᴇꜱᴛ Bᴏᴛ</a>
  
  ‣ My best friend : <a href='tg://settings'>Tʜɪs Pᴇʀsᴏɴ</a> 
