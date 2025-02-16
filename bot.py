@@ -32,13 +32,14 @@ class Bot(Client):
                 "root": "plugins"
             }
         )
+        self.LOGGER = Config.LOGGER
 
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"""
+        self.LOGGER.info("""
         
            ░░░░░██╗░█████╗░██╗░░░██╗
            ░░░░░██║██╔══██╗╚██╗░██╔╝
@@ -47,7 +48,7 @@ class Bot(Client):
            ╚█████╔╝██║░░██║░░░██║░░░
            ░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░
            
-        BOT WORKING PROPERLY......!!""")
+ʙᴏᴛ ɪꜱ ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ......!!""")
       
         #web-response
         app = web.AppRunner(await web_server())
