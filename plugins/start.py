@@ -26,9 +26,10 @@ async def start_command(client: Client, message: Message):
     #          f"<b>#𝐍𝐞𝐰𝐔𝐬𝐞𝐫: \n\n᚛› 𝐈𝐃 - {message.from_user.id} \n᚛› 𝐍𝐚𝐦𝐞 - [{message.from_user.first_name}](tg://user?id={message.from_user.id})</b>"
     #       )
     #     except:
-    #       pass
+    #       pass    
 
     a = await message.reply_text("Processing....")
+    time.sleep(2)
     await a.delete()
     await client.send_message(
         	chat_id=message.chat.id,
