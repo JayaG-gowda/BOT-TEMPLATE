@@ -13,22 +13,22 @@ from pyrogram.types import Message, CallbackQuery
 from bot import Bot
 from config import *
 from Script import script
+from plugins.database.database import db
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start_command(client: Client, message: Message):
-
     id = message.from_user.id
-    # if not db.is_user_exist(id):
-    #     try:
-    #       await db.add_user(id)
-    #       await client.send_message(
-    #       Config.LOG_CHANNEL,
-    #          f"<b>#𝐍𝐞𝐰𝐔𝐬𝐞𝐫: \n\n᚛› 𝐈𝐃 - {message.from_user.id} \n᚛› 𝐍𝐚𝐦𝐞 - [{message.from_user.first_name}](tg://user?id={message.from_user.id})</b>"
-    #       )
-    #     except:
-    #       pass    
+    if not await db.is_user_exist(id):
+        try:
+            #add public channel username
+            await client.send_message(chat_id = "UserName",
+                             text = f"<b>#𝐍𝐞𝐰𝐔𝐬𝐞𝐫: \n\n᚛› 𝐈𝐃 - <code>{message.from_user.id}</code> \n᚛› 𝐍𝐚𝐦𝐞 - <a href= tg://user?id={message.from_user.id}>{message.from_user.first_name}</a></b>"
+                              )
+            await db.add_user(id)
+        except:
+            pass   
 
-    a = await message.reply_text("Processing....")
+    a = await message.reply_text("<b>Processing....</b>")
     time.sleep(2)
     await a.delete()
     await client.send_message(
