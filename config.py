@@ -25,7 +25,7 @@ class Config(object):
 
     API_HASH = os.environ.get("API_HASH", "")
 
-    OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+    OWNER_ID = int(os.environ.get("OWNER_ID", "1061576483")) #me legend580
     
     AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
 
