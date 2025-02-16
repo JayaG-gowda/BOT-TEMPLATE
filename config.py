@@ -16,7 +16,10 @@ class tuple_(object):
 
 class Config(object):
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+    #BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6100891233:AAEPZ22I2sI3IPVWDcsAC1X3Ydf1XqM6qvA") #testing bot 1 (ghfjg)
+    #BOT_TOKEN = os.environ.get("BOT_TOKEN", "6100891233:AAEPZ22I2sI3IPVWDcsAC1X3Ydf1XqM6qvA") #testing bot 2 (url_v3)
     
     API_ID = int(os.environ.get("API_ID", ""))
 
@@ -36,7 +39,7 @@ class Config(object):
 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
     
-    DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
+    #DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
 
     DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
@@ -46,9 +49,3 @@ class Config(object):
     
     #Port
     PORT = os.environ.get("PORT", "8080")
-
-    START_TEXT = """<b>🤗 Hello {}
-    ɪ ᴀᴍ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ.</b>"""
-
-    WAIT_MSG = """"<b>Processing ...</b>"""
-    
