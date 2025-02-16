@@ -19,7 +19,7 @@ class Config(object):
     #BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "6100891233:AAEPZ22I2sI3IPVWDcsAC1X3Ydf1XqM6qvA") #testing bot 1 (ghfjg)
-    #BOT_TOKEN = os.environ.get("BOT_TOKEN", "6100891233:AAEPZ22I2sI3IPVWDcsAC1X3Ydf1XqM6qvA") #testing bot 2 (url_v3)
+    #BOT_TOKEN = os.environ.get("BOT_TOKEN", "5872747581:AAHVN_3OP9uffBCKdesYZXFigzVuRYWLYOY") #testing bot 2 (url_v3)
     
     API_ID = int(os.environ.get("API_ID", ""))
 
